@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 
 public class AddressTest {
 
-  @Rule
-  public DatabaseRule databse = new DatabaseRule();
+  // @Rule
+  // public DatabaseRule databse = new DatabaseRule();
 
 }

@@ -3,7 +3,7 @@ package AddressBook;
 
 
 public class Address {
-  implements Comparable
+  // implements Comparable
   private String id = null;
   private String lastName = null;
   private String firstName = null;
