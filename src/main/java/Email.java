@@ -1,15 +1,20 @@
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-public class Email {
-  String email;
+import java.util.regex.*;
 
-  public Email(String emailAddress) {
-    this.email = emailAddress;
-  }
+public abstract class Email {
+  public String email;
+
+  // public Email(String emailAddress) {
+  //   this.email = emailAddress;
+  // }
 
   public boolean isValid(){
-    Pattern p = Pattern.compile("\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b");
+    String p = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+    System.out.println("p is " + p);
     return Pattern.matches(p, this.email);
   }
 
+  public boolean isValidEmail(String emailAddress){
+    String p = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+    return Pattern.matches(p, emailAddress);
+  }
 }
